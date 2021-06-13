@@ -76,3 +76,6 @@ Projetos que não puderem ser executados não serão avaliados.
 
 Foque em entregar funcionalidades completas!</br></br>
 Quantidade não é qualidade!
+
+
+Esta anotação foi incluída no hotfix
