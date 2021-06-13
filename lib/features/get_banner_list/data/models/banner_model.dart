@@ -1,6 +1,7 @@
-import 'package:alodjinha/features/get_banner_list/domain/entities/banner_entity.dart';
+import '../../domain/entities/banner_entity.dart';
 
 class BannerModel extends BannerEntity {
+  
   BannerModel({
     required int id,
     required String linkUrl,

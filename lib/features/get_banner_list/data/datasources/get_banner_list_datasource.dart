@@ -1,10 +1,10 @@
 import 'dart:convert';
 
-import 'package:alodjinha/core/errors/exceptions.dart';
-import 'package:alodjinha/core/http_client/ihttp_client.dart';
-import 'package:alodjinha/features/get_banner_list/data/datasources/endpoints/alodjinha_endpoints.dart';
-import 'package:alodjinha/features/get_banner_list/data/datasources/iget_banner_list_datasource.dart';
-import 'package:alodjinha/features/get_banner_list/data/models/banner_model.dart';
+import '../../../../core/errors/exceptions.dart';
+import '../../../../core/http_client/ihttp_client.dart';
+import '../models/banner_model.dart';
+import 'endpoints/banner_endpoints.dart';
+import 'iget_banner_list_datasource.dart';
 
 class GetBannerListDatasource implements IGetBannerListDatasource {
   final IhttpClient client;
@@ -12,7 +12,7 @@ class GetBannerListDatasource implements IGetBannerListDatasource {
   GetBannerListDatasource(this.client);
 
   Future<List<BannerModel>> getBannerList() async {
-    final response = await client.get(AlodjinhaEndPoints.bannerList);
+    final response = await client.get(BannerEndPoints.bannerList);
 
     if (response.statusCode == 200) {
       return List<BannerModel>.from(json

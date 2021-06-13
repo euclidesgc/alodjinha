@@ -1,5 +1,6 @@
-import 'package:alodjinha/core/http_client/ihttp_client.dart';
 import 'package:http/http.dart' as http;
+
+import 'ihttp_client.dart';
 
 class HttpClient implements IhttpClient {
   final client = http.Client();

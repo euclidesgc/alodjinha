@@ -1,8 +1,9 @@
-import 'package:alodjinha/core/errors/failures.dart';
-import 'package:alodjinha/core/usecase/usecase.dart';
-import 'package:alodjinha/features/get_banner_list/domain/entities/banner_entity.dart';
-import 'package:alodjinha/features/get_banner_list/domain/repositores/iget_banner_list_repository.dart';
 import 'package:dartz/dartz.dart';
+
+import '../../../../core/errors/failures.dart';
+import '../../../../core/usecase/usecase.dart';
+import '../entities/banner_entity.dart';
+import '../repositories/iget_banner_list_repository.dart';
 
 class GetBannerListUsecase implements Usecase<List<BannerEntity>, NoParams> {
   final IGetBannerListRepository repository;
