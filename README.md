@@ -78,4 +78,8 @@ Foque em entregar funcionalidades completas!</br></br>
 Quantidade não é qualidade! 
 
 
+Quantidade não é qualidade!
+
+
 esta anotação está apenas em bugfix
+Esta anotação foi incluída no hotfix
