@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import '../../../../core/errors/exceptions.dart';
 import '../../../../core/http_client/ihttp_client.dart';
+import '../models/category_model.dart';
 import 'endpoints/category_endpoints.dart';
 import 'iget_category_list_datasource.dart';
-import '../models/category_model.dart';
 
 class GetCategoyListDatasource implements IGetCategoryListDatasource {
   final IhttpClient client;

@@ -45,10 +45,11 @@ void main() {
     verify(() => datasource.getBannerList()).called(1);
   });
 
-  test('Deve retornar um ServerFailure quando chamar o datasouce e não repsonder corretamente', () async {
+  test(
+      'Deve retornar um ServerFailure quando chamar o datasouce e não repsonder corretamente',
+      () async {
     //Arrange
-    when(() => datasource.getBannerList())
-        .thenThrow(ServerException());
+    when(() => datasource.getBannerList()).thenThrow(ServerException());
 
     //Act
     final result = await repository.getBannerList();
@@ -57,6 +58,4 @@ void main() {
     expect(result, Left(ServerFailure()));
     verify(() => datasource.getBannerList()).called(1);
   });
-
-
 }

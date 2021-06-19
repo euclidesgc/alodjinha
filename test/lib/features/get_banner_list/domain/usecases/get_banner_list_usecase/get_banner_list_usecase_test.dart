@@ -7,7 +7,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
-class MockGetBannerListRepository extends Mock
+class GetBannerListRepositoryMock extends Mock
     implements IGetBannerListRepository {}
 
 void main() {
@@ -15,7 +15,7 @@ void main() {
   late IGetBannerListRepository repository;
 
   setUp(() {
-    repository = MockGetBannerListRepository();
+    repository = GetBannerListRepositoryMock();
     usecase = GetBannerListUsecase(repository);
   });
 
@@ -32,12 +32,11 @@ void main() {
     ),
   ];
 
-  NoParams noParams = NoParams();
   test('Deve retornar uma lista de BannerEntity do repositório', () async {
     when(() => repository.getBannerList()).thenAnswer(
         (_) async => Right<Failure, List<BannerEntity>>(tBannerEntityList));
 
-    final result = await usecase(noParams);
+    final result = await usecase(NoParams());
 
     expect(result, Right(tBannerEntityList));
 
@@ -49,7 +48,7 @@ void main() {
     when(() => repository.getBannerList()).thenAnswer(
         (_) async => Left<Failure, List<BannerEntity>>(ServerFailure()));
 
-    final result = await usecase(noParams);
+    final result = await usecase(NoParams());
 
     expect(result, Left(ServerFailure()));
 
