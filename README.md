@@ -78,8 +78,8 @@ Foque em entregar funcionalidades completas!</br></br>
 Quantidade não é qualidade! 
 
 
-Quantidade não é qualidade!
-
 LINHA EM CIMA
+
 TESTANDO 1-2-3!
+
 LINHA EMBAIXO
