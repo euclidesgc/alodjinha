@@ -79,6 +79,3 @@ Quantidade não é qualidade!
 
 
 Quantidade não é qualidade!
-LINHA EM CIMA!
-TESTANDO 12345
-LINHA EMBAIXO!
