@@ -78,4 +78,11 @@ Foque em entregar funcionalidades completas!</br></br>
 Quantidade não é qualidade! 
 
 
+<<<<<<< HEAD
 Quantidade não é qualidade!
+=======
+Quantidade não é qualidade!
+LINHA EM CIMA
+TESTANDO 123
+LINHA EMBAIXO
+>>>>>>> e80216e5ea200b413ee029bb3a1bdabb7a3cdb55
