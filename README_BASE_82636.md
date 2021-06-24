@@ -79,14 +79,6 @@ Foque em entregar funcionalidades completas!</br></br>
 Quantidade não é qualidade! 
 
 
-<<<<<<< HEAD
 LINHA EM CIMA
-TESTANDO 123
-LINHA EMBAIXO
-=======
-LINHA EM CIMA_
-
 TESTANDO 1-2-3
-
-LINHA EMBAIXO_
->>>>>>> 4d926797192caf09e2854bea61dbd31e86da3620
+LINHA EMBAIXO
