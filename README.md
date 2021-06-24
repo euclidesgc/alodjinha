@@ -79,15 +79,6 @@ Quantidade não é qualidade!
 
 
 Quantidade não é qualidade!
-<<<<<<< HEAD
-
-LINHA EM CIM A
-
-TESTANDO 1 2 3
-
-LINHA E-MBAIXO
-=======
 LINHA EM CIMA!
 TESTANDO 12345
 LINHA EMBAIXO!
->>>>>>> 1e7d667e9ff7dc8418fe172f089d5fc629a357e3
