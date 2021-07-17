@@ -1,40 +1,44 @@
+import 'package:alodjinha/features/presenter/widgets/app_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-class HomePage extends StatelessWidget {
+import '../../../../core/app_ui/app_ui.dart';
+import 'home_controller.dart';
+
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends ModularState<HomePage, HomeController> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text("A Lodjinha"),
-          backgroundColor: Colors.purple,
+          title: Row(
+            children: [
+              SizedBox(width: 8),
+              Image.asset(
+                AppImages.logo_menu,
+                // height: 28,
+              ),
+              SizedBox(width: 8),
+              Text(
+                "a Lodjinha",
+                style: AppTypography.logoMenu,
+              ),
+            ],
+          ),
+          backgroundColor: AppColors.warmPurple,
           centerTitle: false,
         ),
+        drawer: AppDrawer(),
         body: Container(
           child: Text("HomePage"),
         ),
-        drawer: Drawer(
-            child: ListView(
-          children: <Widget>[
-            DrawerHeader(
-              child: Text('A Lodjinha'),
-              decoration: BoxDecoration(
-                color: Colors.purple,
-              ),
-            ),
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text("Home"),
-            ),
-            ListTile(
-              leading: Icon(Icons.ac_unit),
-              title: Text("Sobre o aplicativo"),
-            ),
-          ],
-        )),
       ),
     );
   }

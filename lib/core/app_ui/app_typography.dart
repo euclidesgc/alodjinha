@@ -1,4 +1,4 @@
-import 'package:alodjinha/core/ui/app_colors.dart';
+import 'package:alodjinha/core/app_ui/app_colors.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -82,7 +82,7 @@ class AppTypography {
       fontSize: 24,
       height: 0.6,
       fontWeight: FontWeightName.REGULAR,
-      fontColor: AppColors.dark);
+      fontColor: AppColors.white);
 
   static final TextStyle precoPor = _tsRoboto(
       fontSize: 20,
