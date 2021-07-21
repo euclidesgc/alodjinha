@@ -1,7 +1,6 @@
 import '../../domain/entities/banner_entity.dart';
 
 class BannerModel extends BannerEntity {
-  
   BannerModel({
     required int id,
     required String linkUrl,

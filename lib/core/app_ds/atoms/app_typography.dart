@@ -1,6 +1,8 @@
-import 'package:alodjinha/core/app_ui/app_colors.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'app_colors.dart';
 
 enum FontWeightName {
   THIN,
@@ -17,32 +19,32 @@ enum FontWeightName {
 class AppTypography {
   static TextStyle _tsPacifico({
     required double fontSize,
-    required double height,
     required FontWeightName fontWeight,
     required Color fontColor,
+    TextDecoration? decoration,
   }) {
     return GoogleFonts.pacifico(
       textStyle: TextStyle(
         fontSize: fontSize,
         fontWeight: getFontWeight(fontWeight),
-        height: height,
         color: fontColor,
+        decoration: decoration,
       ),
     );
   }
 
   static TextStyle _tsRoboto({
     required double fontSize,
-    required double height,
     required FontWeightName fontWeight,
     required Color fontColor,
+    TextDecoration? decoration,
   }) {
     return GoogleFonts.roboto(
       textStyle: TextStyle(
         fontSize: fontSize,
         fontWeight: getFontWeight(fontWeight),
-        height: height,
         color: fontColor,
+        decoration: decoration,
       ),
     );
   }
@@ -74,61 +76,51 @@ class AppTypography {
 
   static final TextStyle logoSobre = _tsPacifico(
       fontSize: 64,
-      height: 1.5,
       fontWeight: FontWeightName.REGULAR,
       fontColor: AppColors.dark);
 
   static final TextStyle logoMenu = _tsPacifico(
       fontSize: 24,
-      height: 0.6,
       fontWeight: FontWeightName.REGULAR,
       fontColor: AppColors.white);
 
   static final TextStyle precoPor = _tsRoboto(
       fontSize: 20,
-      height: 1,
       fontWeight: FontWeightName.BOLD,
-      fontColor: AppColors.dark);
+      fontColor: AppColors.tomato);
 
   static final TextStyle descricaoProduto = _tsRoboto(
       fontSize: 18,
-      height: 1,
       fontWeight: FontWeightName.MEDIUM,
       fontColor: AppColors.dark);
 
   static final TextStyle descricaoProdutoBold = _tsRoboto(
-      fontSize: 17,
-      height: 0.4,
-      fontWeight: FontWeightName.BOLD,
-      fontColor: AppColors.dark);
+      fontSize: 17, fontWeight: FontWeightName.BOLD, fontColor: AppColors.dark);
 
   static final TextStyle nomeDesenvolvedor = _tsRoboto(
       fontSize: 14,
-      height: 0.3,
       fontWeight: FontWeightName.MEDIUM,
       fontColor: AppColors.dark);
 
   static final TextStyle menuItem = _tsRoboto(
       fontSize: 14,
-      height: 0.3,
       fontWeight: FontWeightName.MEDIUM,
       fontColor: AppColors.dark);
 
   static final TextStyle nomeCategoria = _tsRoboto(
       fontSize: 13,
-      height: 1,
       fontWeight: FontWeightName.REGULAR,
       fontColor: AppColors.dark);
 
   static final TextStyle precoDe = _tsRoboto(
-      fontSize: 12,
-      height: 1,
-      fontWeight: FontWeightName.MEDIUM,
-      fontColor: AppColors.dark);
+    fontSize: 12,
+    fontWeight: FontWeightName.MEDIUM,
+    fontColor: AppColors.dark,
+    decoration: TextDecoration.lineThrough,
+  );
 
   static final TextStyle dataDesenvolvimento = _tsRoboto(
       fontSize: 12,
-      height: 0.3,
       fontWeight: FontWeightName.LIGHT,
       fontColor: AppColors.dark);
 }

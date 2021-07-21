@@ -6,10 +6,10 @@ import '../models/category_model.dart';
 import 'endpoints/category_endpoints.dart';
 import 'iget_category_list_datasource.dart';
 
-class GetCategoyListDatasource implements IGetCategoryListDatasource {
+class GetCategoryListDatasource implements IGetCategoryListDatasource {
   final IhttpClient client;
 
-  GetCategoyListDatasource(this.client);
+  GetCategoryListDatasource(this.client);
 
   @override
   Future<List<CategoryModel>> getCategoryList() async {

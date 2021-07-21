@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:alodjinha/core/errors/exceptions.dart';
 import 'package:alodjinha/core/http_client/ihttp_client.dart';
-import 'package:alodjinha/features/banner_list/data/datasources/get_banner_list_datasource.dart';
+import 'package:alodjinha/features/banner_list/data/datasources/get_banner_list_datasource_from_api.dart';
 import 'package:alodjinha/features/banner_list/data/datasources/iget_banner_list_datasource.dart';
 import 'package:alodjinha/features/banner_list/data/models/banner_model.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -18,7 +18,7 @@ main() {
 
   setUp(() {
     client = HttpClientMock();
-    datasource = GetBannerListDatasource(client);
+    datasource = GetBannerListDatasourceFromApi(client);
   });
 
   final urlExpected = "https://alodjinha.herokuapp.com/banner";

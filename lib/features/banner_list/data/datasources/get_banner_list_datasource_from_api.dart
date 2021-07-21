@@ -6,10 +6,10 @@ import '../models/banner_model.dart';
 import 'endpoints/banner_endpoints.dart';
 import 'iget_banner_list_datasource.dart';
 
-class GetBannerListDatasource implements IGetBannerListDatasource {
+class GetBannerListDatasourceFromApi implements IGetBannerListDatasource {
   final IhttpClient client;
 
-  GetBannerListDatasource(this.client);
+  GetBannerListDatasourceFromApi(this.client);
 
   Future<List<BannerModel>> getBannerList() async {
     final response = await client.get(BannerEndPoints.bannerList);
@@ -17,7 +17,7 @@ class GetBannerListDatasource implements IGetBannerListDatasource {
     if (response.statusCode == 200) {
       return List<BannerModel>.from(json
           .decode(response.data)["data"]
-          .map((x) => BannerModel.fromJson(x)));
+          .map((item) => BannerModel.fromJson(item)));
     } else {
       throw ServerException();
     }
