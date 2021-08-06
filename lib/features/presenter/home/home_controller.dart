@@ -11,7 +11,6 @@ part 'home_controller.g.dart';
 class HomeController = HomeControllerBase with _$HomeController;
 
 abstract class HomeControllerBase with Store {
-
   final GetCategoryListUsecase categoryListUsecase;
 
   HomeControllerBase(
@@ -32,32 +31,18 @@ abstract class HomeControllerBase with Store {
   @action
   getDados() async {
     loading = true;
-    // bannerListFailure = none();
     categoryListFailure = none();
 
     futureValues = await Future.wait([
-      // bannerListUsecase(NoParams()),
       categoryListUsecase(NoParams()),
     ]);
-
-    // getBannerList();
     getCategoryList();
 
     loading = false;
   }
 
-  // void getBannerList() {
-  //   futureValues[0].fold((failureResult) {
-  //     debugPrint("Deu ruim");
-  //     bannerListFailure = optionOf(failureResult);
-  //   }, (list) {
-  //     listBanners.clear();
-  //     listBanners = list;
-  //   });
-  // }
-
   void getCategoryList() {
-    futureValues[1].fold((failureResult) {
+    futureValues[0].fold((failureResult) {
       debugPrint("Deu ruim");
       categoryListFailure = optionOf(failureResult);
     }, (list) {
